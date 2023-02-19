@@ -1,0 +1,31 @@
+{
+  "name": "basajs",
+  "version": "1.0.0",
+  "description": "a javascript library that allows your website to be multi-language with ease of use.",
+  "type": "module",
+  "main": "dist/basa.cjs.js",
+  "module": "dist/basa.esm.js",
+  "browser": "dist/basa.js",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JastinXyz/basa.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JastinXyz/basa/issues"
+  },
+  "keywords": [],
+  "author": "JstnLT <jastinlinggar@gmail.com> (jstnlt.my.id)",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-terser": "^0.4.0",
+    "rollup": "^3.17.1"
+  },
+  "files": [
+    "dist",
+    "src"
+  ]
+}

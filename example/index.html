@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../dist/basa.js"></script>
+</head>
+<body>
+    
+    <p data-basa="hello"></p>
+    <p data-basa="greeting"></p>
+
+    <button onclick="Basa.changeLang('id')">id</button>
+    <button onclick="Basa.changeLang('en')">en</button>
+
+    <script>
+       const dict = {
+            hello: {
+                id: "halo",
+                en: "hello",
+            },
+            greeting: {
+               id: "selamat datang",
+               en: "welcome",
+           },
+        };
+
+        Basa.init({
+            languages: ["id", "en"],
+            useLocalStorage: true,
+            dictionary: dict,
+        });
+    </script>
+</body>
+</html>
