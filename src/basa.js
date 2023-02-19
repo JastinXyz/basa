@@ -1,11 +1,22 @@
 var eval2 = eval;
 var current_lang_index = 0;
 var useLS = false;
+var useActive = false;
 var current_lang;
+var langs;
 var dict;
 
 const changeLang = function (lang) {
   current_lang = lang;
+
+  if(useActive) {
+    langs.forEach(element => {
+      document.getElementById(element)?.classList.remove("active");
+    });
+
+    document.getElementById(lang)?.classList.add("active");
+  }
+
   if (useLS) localStorage.setItem("lang", lang);
   const elements = document.querySelectorAll("[data-basa]");
 
@@ -22,11 +33,14 @@ const getCurrentLang = function () {
 const init = function ({
   languages = [],
   useLocalStorage = false,
+  addActiveClass = false,
   dictionary = {},
 }) {
   current_lang_index = 0;
   current_lang = languages[current_lang_index];
   useLS = useLocalStorage;
+  useActive = addActiveClass;
+  langs = languages;
   dict = dictionary;
 
   let ls = localStorage.getItem("lang");

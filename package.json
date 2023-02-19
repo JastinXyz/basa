@@ -1,6 +1,6 @@
 {
   "name": "basajs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a javascript library that allows your website to be multi-language with ease of use.",
   "type": "module",
   "main": "dist/basa.cjs.js",

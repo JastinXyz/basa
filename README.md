@@ -60,8 +60,9 @@ use it with
 
 ```js
 Basa.init({
-    languages: [] // language array,
-    useLocalStorage: false // When true, localstorage will store the language in the `lang` key which can be used if the client revisits the page, the language will automatically use the one in localstorage,
+    languages: [], // language array
+    useLocalStorage: false, // if true, localstorage will store the language in the `lang` key which can be used if the client revisits the page, the language will automatically use the one in localstorage
+    addActiveClass: false, // if true, it will add the "active" class to the element with the id being the name of one of the provided languages
     dictionary: {} // translation object
 });
 ```

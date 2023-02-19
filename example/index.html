@@ -13,8 +13,8 @@
     <p data-basa="hello"></p>
     <p data-basa="greeting"></p>
 
-    <button onclick="Basa.changeLang('id')">id</button>
-    <button onclick="Basa.changeLang('en')">en</button>
+    <button onclick="Basa.changeLang('id')" id="id">id</button>
+    <button onclick="Basa.changeLang('en')" id="en">en</button>
 
     <script>
        const dict = {
@@ -31,6 +31,7 @@
         Basa.init({
             languages: ["id", "en"],
             useLocalStorage: true,
+            addActiveClass: true,
             dictionary: dict,
         });
     </script>
