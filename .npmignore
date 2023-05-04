@@ -1,0 +1,6 @@
+/node_modules
+/example
+/src
+.gitignore
+package-lock.json
+rollup.config.js
