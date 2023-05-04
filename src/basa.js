@@ -22,7 +22,7 @@ const changeLang = function (lang) {
 
   elements.forEach((element) => {
     const key = element.dataset.basa;
-    element.innerHTML = eval2(`dict${["[", "."].includes(key) ? key : `.${key}`}`)[current_lang] || "N/A";
+    element.innerHTML = eval2(`let basa_dict = ${JSON.stringify(dict)};\nbasa_dict${["[", "."].includes(key) ? key : `.${key}`}`)[current_lang] || "N/A"
   });
 };
 
